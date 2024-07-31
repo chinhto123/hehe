@@ -70,7 +70,7 @@
                 <source src="image/KidsCheering.mp4" 
                    type="video/mp4">
             </video>
-            <audio id="ansmp3" controls autoplay>
+            <audio id="ansmp3" controls>
                 <source src="image/yeah.mp3" >
               Your browser does not support the audio element.
             </audio>
@@ -91,14 +91,18 @@
         {
             document.getElementById('novideo').play();
         }
+        function playAudio2()
+        {
+            document.getElementById('ansmp3').play();
+        }        
 
         function nextPage() {
             //window.location.href = "yes.html";
             document.getElementById('ans').style.display = 'block';
             document.getElementById('ask').style.display = 'none';
             document.getElementById('novideo').pause();
-            document.getElementById('ansmp3').play();
             document.getElementById('ansvideo').play();
+            playAudio2();
         }
 
         function moveButton() {
