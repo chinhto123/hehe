@@ -48,7 +48,7 @@
                 <img src="image/ask.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage(),PlaySoundAndVideo('videoInHTML'),PlaySoundAndVideo('audioInHTML')">Yes</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
             </div>
             <video id="novideo" width="0" height="0" controls>
@@ -70,7 +70,7 @@
                 <source src="image/KidsCheering.mp4" 
                    type="video/mp4">
             </video>
-            <audio id="audioInHTML" controls="controls">
+            <audio id="ansmp3" controls preload="auto">
                 <source src="image/yeah.mp3" >
               Your browser does not support the audio element.
             </audio>
@@ -96,7 +96,7 @@
             //window.location.href = "yes.html";
             document.getElementById('ans').style.display = 'block';
             document.getElementById('ask').style.display = 'none';
-            
+            //document.getElementById('novideo').pause();
             document.getElementById('ansvideo').play();
         }
 
@@ -106,10 +106,6 @@
             document.getElementById('noButton').style.left = `${x}px`;
             document.getElementById('noButton').style.top = `${y}px`;
             playAudio();
-        }
-        function PlaySoundAndVideo(soundObj,videoObj) {
-            var soundAndVideo=document.getElementById(soundObj,videoObj);
-            soundAndVideo.play();
         }
 
     </script> 
